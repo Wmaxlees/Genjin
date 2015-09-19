@@ -16,7 +16,7 @@ namespace Genjin {
             virtual void InitializeSystem() = 0;
             virtual void ShutdownSystem() = 0;
 
-        private:
+        protected:
             System() {}
             ~System() {}
 
