@@ -7,7 +7,7 @@
 #ifndef _H_MEMORY_MANAGER
 #define _H_MEMORY_MANAGER
 
-#include "System.h"
+#include "../System.h"
 
 namespace Genjin {
     namespace Systems {

@@ -5,7 +5,8 @@
 #ifndef GENJIN_CONFIGURATIONMANAGER_H
 #define GENJIN_CONFIGURATIONMANAGER_H
 
-#include "System.h"
+#include "../System.h"
+#include "enumerations/BoolConfigKey.h"
 
 namespace Genjin {
     namespace Systems {
@@ -15,18 +16,11 @@ namespace Genjin {
             ConfigurationManager();
             ~ConfigurationManager();
 
-            enum BoolConfigKey {
-                // GRAPHICS
-                GRAPHICS_FULLSCREEN = 0,
-
-                BOOL_CONFIG_NULL
-            };
-
-            bool GetBoolConfig(BoolConfigKey key);
+            bool GetBoolConfig(Enumerations::BoolConfigKey key);
 
         private:
             // Configuration data
-            bool m_aBoolConfigData[BOOL_CONFIG_NULL];
+            bool m_aBoolConfigData[Enumerations::BoolConfigKey::LAST];
 
         };
 
